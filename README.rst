@@ -180,7 +180,42 @@ the end of the output similar to the following::
 
     ======================= 380 passed in 245.56 seconds =======================
 
-If a test failed, it will show the number of failed and what went wrong within
-the test output. If that's the case, ensure you have the latest version of code
-and are in a supported environment. Otherwise, create an issue on GitHub to
-attempt to get the issue resolved.
+If the tests were successful (as indicated by the "passed" message), everything is working correctly. You're all set to use Sportsipy!
+
+Troubleshooting Failed Tests:
+
+If any tests failed, the output will indicate the number of failures and what went wrong. Don't worry! Here's an example of a failure output what you can do:
+
+======================================== FAILURES ===================================================================
+________________________________ test_team_statistics_failure ________________________________________________
+
+    def test_team_statistics_failure():
+        # Simulate a failed test by asserting false
+>       assert False, "Example assertion error: Failed to retrieve team statistics."
+
+tests/test_sportsipy.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def test_team_statistics_failure():
+        # Simulate a failed test by asserting false
+>       assert False, "Example assertion error: Failed to retrieve team statistics."
+E       AssertionError: Example assertion error: Failed to retrieve team statistics.
+
+tests/test_sportsipy.py:21: AssertionError
+======================= 379 passed, 1 failed in 245.56 seconds =======================
+
+1. Update Your Code:
+   Make sure you have the latest version of Sportsipy installed. Sometimes, issues are fixed in newer releases.
+
+2. Check Your Environment:
+   Ensure you're running Sportsipy in a supported environment. Refer to the documentation for the list of supported configurations.
+
+3. Creating an Issue on GitHub:
+   If you're still experiencing problems, don't hesitate to create an issue on GitHub. Follow these steps:
+   - Go to the [Sportsipy GitHub repository](https://github.com/roclark/sportsipy).
+   - Click on the "Issues" tab.
+   - Click the green "New issue" button.
+   - Describe the problem you're facing in detail, including any error messages or relevant context.
+   - Submit the issue, and the maintainers will investigate and assist you in resolving the issue.
+
+By following these more detailed steps, you can troubleshoot any issues you encounter and get the support you need to make the most out of Sportsipy!
